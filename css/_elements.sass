@@ -1,0 +1,91 @@
+
+body
+    background-color: #EDEDED
+    color: #000000
+    font-family: 'Muller', sans-serif
+
+main
+    min-height: 40vh
+
+.container
+    width: 100%
+    max-width: 1200px
+    padding: 0 15px
+    margin: 0 auto
+    position: relative
+    z-index: 1
+
+ul, ol
+    list-style-type: none
+a
+    text-decoration: none
+    color: #141414
+    transition: opacity ease .3s
+    &:hover
+        opacity: .7
+
+.marked
+    color: #C81197
+
+.title
+    &-heading
+        font-style: normal
+        font-weight: bold
+        font-size: 34px
+        line-height: 42px
+        text-align: center
+        color: #000000
+        margin-bottom: 42px
+
+.btn
+    display: flex
+    justify-content: space-between
+    align-items: center
+    line-height: 18px
+    font-size: 18px
+    height: 54px
+    padding: 3px 35px 0
+    transition: all ease .3s
+    background: linear-gradient(266.84deg, #A615A3 -20.58%, #C81197 104.93%)
+    border-radius: 34px
+    box-shadow: 0px 6px 25px -6px #A615A3
+    letter-spacing: -0.005em
+    color: #ffffff
+    svg
+        margin-right: 15px
+    &:hover
+        opacity: .8
+    &:active
+        opacity: .6
+    &[disabled]
+        cursor: unset
+        color: rgba(#ffffff, .7)
+        opacity: .5
+
+input[type="radio"]
+    &:checked ~ label
+        color: #ffffff
+        background-color: #9FDC6E
+input
+    font-weight: normal
+    font-size: 20px
+    line-height: 20px
+    color: #9F9F9F
+    padding: 0 30px
+    width: 249px
+    height: 48px
+    background: #FFFFFF
+    box-shadow: 1px 4px 12px rgba(0, 0, 0, 0.14)
+    border-radius: 54px
+
+@media screen and ( max-width: 1000px )
+    .title
+        &-heading
+            line-height: 50px
+            font-size: 40px
+
+@media screen and ( max-width: 1000px )
+    .title
+        &-heading
+            line-height: 48px
+            font-size: 38px

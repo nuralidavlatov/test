@@ -1,0 +1,595 @@
+.modal
+    display: none
+    position: fixed
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    z-index: 900009
+    background-color: rgba(#000, 0.6)
+    padding: 0 15px
+    box-sizing: border-box
+    &-content
+        width: 88%
+        display: block
+        max-width: 980px
+        // background-color: #fff
+        // box-shadow: 0px 2px 37px rgba(0, 0, 0, 0.88)
+        border-radius: 2px
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        padding: 40px 0
+        overflow-y: scroll
+        max-height: 100vh
+        &::-webkit-scrollbar
+            width: 0
+            height: 0
+        .modalClose
+            display: block
+            position: absolute
+            top: -34px
+            right: -34px
+            transform: none
+            background-color: transparent
+            img
+                max-width: 34px
+            &:hover
+                opacity: 0.9
+
+    &.product-order
+        background-color: rgba(#020E28, .7)
+        .modal-content
+            background-color: transparentize
+            display: flex
+            justify-content: space-between
+            align-items: flex-start
+
+        .form-section
+            max-width: 490px
+            background: #020E28
+            box-shadow: 0px 0px 31px #020E28
+            border-radius: 19px
+            &-header
+                background: #091430
+                box-shadow: 0px 0px 31px #020E28
+                border-radius: 19px
+                padding: 25px 30px
+                display: flex
+                align-items: center
+                justify-content: space-between
+                .text
+                    display: block
+                    font-weight: bold
+                    font-size: 14px
+                    line-height: 15px
+                    text-transform: uppercase
+                    padding: 14px 0 14px 64px
+                    position: relative
+                    z-index: 1
+
+                    &::before
+                        display: inline-block
+                        border-radius: 4px
+                        content: ''
+                        width: 44px
+                        height: 44px
+                        background-image: url('../img/popular-icon.svg')
+                        background-repeat: no-repeat
+                        background-position: center center
+                        background-size: contain
+                        position: absolute
+                        top: 0
+                        left: 0
+                .link
+                    font-style: normal
+                    font-weight: 500
+                    font-size: 11px
+                    line-height: 13px
+                    text-decoration-line: underline
+                    color: #FFFFFF
+
+            form
+                padding: 30px
+
+            .checkbox
+                &-wrap
+                    display: block
+                    width: 100%
+                    position: relative
+                    z-index: 1
+                    margin-bottom: 35px
+                    input
+                        position: absolute
+                        top: 0
+                        left: 0
+                        width: 23px
+                        height: 23px
+                        opacity: 0
+                        &:checked ~ label
+                            &::before
+                                background-image: url('../img/check.svg')
+                    label
+                        display: block
+                        font-weight: 500
+                        font-size: 12px
+                        line-height: 14px
+                        color: #FFFFFF
+                        padding: 4px 4px 4px 38px
+                        &::before
+                            content: ''
+                            display: block
+                            width: 23px
+                            height: 23px
+                            background: rgba(9, 20, 48, 0.26)
+                            border: 1.2px solid #0D1833
+                            background-repeat: no-repeat
+                            background-position: center center
+                            background-size: 60%
+                            box-sizing: border-box
+                            border-radius: 2px
+                            position: absolute
+                            top: 0
+                            left: 0
+                        a
+                            color: #F7213C
+
+            .label
+                display: block
+                margin-bottom: 28px
+                &-privacy
+
+                &-text
+                    display: block
+                    margin-bottom: 15px
+                    padding-left: 20px
+                    position: relative
+                    z-index: 1
+                    font-style: normal
+                    font-weight: bold
+                    font-size: 14px
+                    line-height: 17px
+                    color: #FFFFFF
+                    &::before
+                        content: ''
+                        display: block
+                        width: 6px
+                        height: 6px
+                        background: linear-gradient(270deg, #F7213C 0%, #D00960 104.32%)
+                        border-radius: 7px
+                        position: absolute
+                        top: 50%
+                        left: 0
+                        margin-top: -3px
+                input
+                    display: block
+                    width: 100%
+                    height: 44px
+                    background: #091430
+                    border: 1px solid #0D1833
+                    box-sizing: border-box
+                    border-radius: 5px
+                    padding: 0 28px
+
+            .btn
+                display: block
+                width: 100%
+                padding-left: 0
+                &::before
+                    background-image: url('../img/paste.svg')
+                    left: 34%
+
+        .orders
+            padding: 23px
+            width: 100%
+            max-width: 480px
+            background: #020E28
+            box-shadow: 0px 0px 31px #020E28
+            border-radius: 19px
+            &-item
+                padding: 27px 30px
+                background: #091430
+                box-shadow: 0px 0px 31px #020E28
+                border-radius: 19px
+                display: flex
+                justify-content: space-between
+                margin-bottom: 20px
+                &-img
+                    width: 148px
+                    min-width: 148px
+                    height: 158px
+                    position: relative
+                    z-index: 1
+                    background: linear-gradient(0.01deg, #F5203D -106.43%, #091430 99.99%)
+                    border-radius: 6px
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    flex-direction: column
+                    margin-right: 30px
+                    border: 1px solid #F5203D
+                    img
+                        display: block
+                        margin: 0 auto 20px
+                        max-height: 80px
+                        max-width: 80%
+                        // width: 100%
+                    .descr
+                        font-style: normal
+                        font-weight: normal
+                        font-size: 11px
+                        line-height: 13px
+                        color: #FFFFFF
+                        text-align: center
+                        display: block
+                        margin: 0 auto
+
+                &-title
+                    position: relative
+                    z-index: 1
+                    padding-bottom: 38px
+
+                &__type
+                    font-style: normal
+                    font-weight: bold
+                    font-size: 11px
+                    line-height: 13px
+                    color: #313E5E
+                    margin-bottom: 12px
+
+                &__heading
+                    font-weight: bold
+                    font-size: 14px
+                    line-height: 17px
+                    color: #FFFFFF
+                    margin-bottom: 25px
+                &__art
+                    font-style: normal
+                    font-weight: normal
+                    font-size: 12px
+                    line-height: 14px
+                &__amount
+                    font-weight: 500
+                    font-size: 14px
+                    line-height: 17px
+                    color: #313E5D
+                    position: absolute
+                    bottom: 5px
+                    left: 0
+                &__price
+                    font-style: normal
+                    font-weight: bold
+                    font-size: 15px
+                    line-height: 18px
+                    position: absolute
+                    bottom: 0
+                    right: 0
+
+            &-footer
+                display: flex
+                justify-content: space-between
+                align-items: center
+                padding: 10px 35px
+                &__heading
+                    font-style: normal
+                    font-weight: 500
+                    font-size: 13px
+                    line-height: 15px
+                    color: #FFFFFF
+                &__price
+                    font-style: normal
+                    font-weight: bold
+                    font-size: 15px
+                    line-height: 18px
+                    color: #FFFFFF
+
+    &.store-products
+        .modal-content
+            max-width: 480px
+            padding: 20px 0
+            border-radius: 19px
+            &::before
+                content: ''
+                display: block
+                width: 100%
+                height: 100%
+                position: absolute
+                top: 30px
+                left: 0
+                box-shadow: 0px 0px 31px #020E28
+                background-color: #091430
+
+        .search
+            width: 100%
+            display: flex
+            justify-content: space-between
+            position: relative
+            z-index: 1
+            margin-bottom: 14px
+            &-input
+                display: block
+                width: 98%
+                height: 44px
+                position: relative
+                z-index: 1
+                background: #091430
+                border: 1px solid #0D1833
+                box-sizing: border-box
+                border-radius: 5px
+                padding: 0 23px
+                font-size: 16px
+            &-btn
+                display: block
+                width: 44px
+                height: 44px
+                border-radius: 5px
+                background-image: url('../img/search-icon.svg')
+                background-repeat: no-repeat
+                background-position: center center
+                background-size: contain
+                box-shadow: 0px 4px 16px rgba(230, 22, 74, 0.35)
+                position: absolute
+                top: 0px
+                right: 0
+                z-index: 100
+
+        .filter
+            display: flex
+            justify-content: center
+            align-items: center
+            max-width: 240px
+            &-text
+                font-weight: bold
+                font-size: 13px
+                line-height: 15px
+                margin-right: 15px
+                color: #313E5E
+            &-input
+                width: 77px
+                height: 44px
+                text-align: center
+                background: #091430
+                border: 1px solid #0D1833
+                box-sizing: border-box
+                border-radius: 5px
+                margin: 0 7px
+
+        .select
+            width: 184px
+            height: 44px
+            &-styled
+                height: 44px
+                font-weight: 500
+                font-size: 11px
+                line-height: 13px
+                color: #2D3F68
+                padding: 0 20px
+                &::after
+                    display: inline-block
+                    border-radius: 5px
+                    content: ''
+                    width: 44px
+                    height: 44px
+                    box-shadow: 0px 4px 16px rgba(230, 22, 74, 0.35)
+                    background: linear-gradient(270deg, #FE2635 -7.45%, #C80469 111.7%)
+                    background-repeat: no-repeat
+                    background-position: center center
+                    background-size: 150%
+                    position: absolute
+                    z-index: 1
+                    top: 0
+                    right: 0
+                &::before
+                    display: inline-block
+                    border-radius: 5px
+                    content: ''
+                    width: 44px
+                    height: 20px
+                    background-repeat: no-repeat
+                    background-position: center center
+                    background-size: 15px
+                    position: absolute
+                    z-index: 111
+                    top: 16px
+                    right: 0
+                    background-image: url(../img/arrow-down-white.svg)
+
+            &-options
+                max-width: 100%
+                li
+                    font-weight: 500
+                    font-size: 11px
+                    line-height: 13px
+                    color: #ffffff
+                    border-bottom: 1px solid rgba(#2D3F68, .4)
+
+        .store-products
+            position: relative
+            z-index: 1
+            &-filter
+                position: relative
+                z-index: 1000
+                background: #131F3F
+                border-radius: 19px
+                padding: 26px
+                box-shadow: 0px 40px 30px 0px #010E28
+                margin-bottom: 20px
+                &-row
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+
+            &-item
+                border-radius: 6px
+                position: relative
+                z-index: 1
+                width: 126px
+                min-height: 130px
+                padding: 14px 18px
+                display: flex
+                flex-direction: column
+                justify-content: flex-end
+                margin: 0 auto 18px
+                border: 1px solid transparent
+                &.blue
+                    background: linear-gradient(0.01deg, #219DF6 -106.43%, #020E28 99.99%)
+                    border-color: #219DF6
+                    .main-store-item__descr
+                &.red
+                    background: linear-gradient(0.01deg, #E21383 -106.43%, #020E28 99.99%)
+                    border-color: #E21383
+                &.purpl
+                    background: linear-gradient(0.02deg, #CF163B -48.53%, #010E28 99.98%)
+                    border-color: #CF163B
+                img
+                    position: absolute
+                    z-index: -1
+                    max-width: 80%
+                    max-height: 100px
+                    top: 10%
+                    left: 50%
+                    transform: translateX(-50%)
+                &__price
+                    position: absolute
+                    top: 15px
+                    right: 14px
+                    font-weight: bold
+                    font-size: 11px
+                    line-height: 13px
+                &__heading
+                    font-style: normal
+                    font-weight: bold
+                    font-size: 11px
+                    line-height: 13px
+                    margin-bottom: 4px
+                &__descr
+                    font-style: normal
+                    font-weight: 500
+                    font-size: 9px
+                    line-height: 1px
+                    color: #ffffff
+                    opacity: .5
+
+            &-wrap
+                display: flex
+                background-color: #091430
+                flex-wrap: wrap
+                padding: 10px 20px 20px
+                position: relative
+                z-index: 1
+                max-height: 380px
+                overflow-y: scroll
+                border-radius: 19px
+                &::-webkit-scrollbar
+                    width: 0
+                    height: 0
+
+            &-footer
+                box-shadow: 0px -30px 30px 0px #010E28
+                position: relative
+                width: 100%
+                z-index: 1
+                max-width: 424px
+                margin: 0 auto
+                display: flex
+                align-items: center
+                justify-content: flex-start
+                flex-wrap: wrap
+                background: #142141
+                border-radius: 7px
+                padding: 18px 0 0
+                &-item
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                    margin-bottom: 19px
+                    .text
+                        font-weight: bold
+                        font-size: 13px
+                        line-height: 15px
+                        color: #313E5D
+                        margin: 0 10px 0 20px
+                    .amount
+                        width: 80px
+                        height: 35px
+                        background: #0D1833
+                        border-radius: 4px
+                        font-weight: bold
+                        font-size: 13px
+                        line-height: 15px
+                        text-align: center
+                        color: #FFFFFF
+                        &-text
+                            line-height: 35px
+                .btn
+                    width: 100%
+                    height: 62px
+                    padding: 0
+
+    &.is-open
+        display: block
+
+@media only screen and ( max-width:  970px )
+    .modal
+        &-content
+
+        &.product-order
+            .modal
+                &-content
+                    max-width: 490px
+                    display: block
+            .form-section
+                margin-bottom: 20px
+                &-header
+                    padding: 25px 20px
+                    .text
+                        padding: 12px 0 9px 48px
+                        font-size: 9px
+                        &::before
+                            width: 35px
+                            height: 35px
+                    .link
+                        font-size: 10px
+
+                .label
+                    &-text
+                        margin-bottom: 10px
+                        font-size: 12px
+                    input
+                        font-size: 14px
+                        padding: 0 20px
+
+                .btn
+                    &::before
+                        left: 24%
+
+            .orders-item
+                display: block
+                max-width: 300px
+                margin: 0 auto 20px
+                &-img
+                    margin: 0 auto 20px
+                &__amount
+                    bottom: 0
+
+@media only screen and ( max-width:  540px )
+    .modal
+        &-content
+        &.store-products
+            .store-products
+                &-filter
+                    &-row
+                        flex-wrap: wrap
+                        justify-content: center
+
+                &-footer
+                    max-width: 90%
+                    &-item
+                        padding-right: 20px
+                        width: 100%
+                        justify-content: space-between
+            .filter
+                margin: 0 auto 20px
+            .select
+                width: 100%
